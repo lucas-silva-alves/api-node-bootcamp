@@ -2,7 +2,7 @@ POST http://localhost:3333/courses
 Content-Type: application/json
 
 {
-    "title": "Curso de Nest"
+    "title": "Cur"
 }
 
 ###
@@ -11,4 +11,4 @@ GET http://localhost:3333/courses
 
 ###
 
-GET http://localhost:3333/courses/3
+GET http://localhost:3333/courses/d7d442c0-d80d-4753-bcfe-87441a7615cb
