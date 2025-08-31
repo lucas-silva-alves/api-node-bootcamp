@@ -1,0 +1,25 @@
+POST http://localhost:3333/courses
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwNzg2MGExOC0zYzA5LTRlODYtYjRlNy1kMWM5NzRkNmU3MmUiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NjU1OTQzNn0.zULRguS8LloOwVDjLID9TZST1LygDXYVND7XoZOsM4E
+
+{
+    "title": "Curso de Programação"
+}
+
+###
+
+GET http://localhost:3333/courses
+###
+
+GET http://localhost:3333/courses/0d52607c-eab0-4db3-a612-0ea94c7e356c
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwNzg2MGExOC0zYzA5LTRlODYtYjRlNy1kMWM5NzRkNmU3MmUiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NjU1Nzg5Nn0.7dWz97bwJfQZovjuH6GAg9TjqVphqaaGVoJP5k4m1rY
+
+###
+
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+    "email": "Yuri_Martins67@bol.com.br",
+    "password": "password123"
+}

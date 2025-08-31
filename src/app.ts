@@ -1,10 +1,11 @@
-import { fastifySwagger } from '@fastify/swagger'
 import fastify from "fastify"
+import { fastifySwagger } from '@fastify/swagger'
 import { validatorCompiler, serializerCompiler, type ZodTypeProvider, jsonSchemaTransform } from 'fastify-type-provider-zod'
-import { createCourseRoute } from './src/routes/create-course.ts'
-import { getCourseByIdRoute } from './src/routes/get-course-by-id.ts'
-import { getCoursesRoute } from './src/routes/get-courses.ts'
+import { createCourseRoute } from './routes/create-course.ts'
+import { getCourseByIdRoute } from './routes/get-course-by-id.ts'
+import { getCoursesRoute } from './routes/get-courses.ts'
 import scalarAPIReference from '@scalar/fastify-api-reference'
+import { loginRoute } from "./routes/login.ts"
 
 const server = fastify({
   logger: {
@@ -38,13 +39,13 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 
+
 server.setValidatorCompiler(validatorCompiler)
 server.setSerializerCompiler(serializerCompiler)
 
 server.register(createCourseRoute)
 server.register(getCourseByIdRoute)
 server.register(getCoursesRoute)
+server.register(loginRoute)
 
-server.listen({ port: 3333 }).then(() => {
-  console.log("Ta rodando!")
-})
+export { server }
