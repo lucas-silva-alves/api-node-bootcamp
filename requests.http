@@ -3,12 +3,15 @@ Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwNzg2MGExOC0zYzA5LTRlODYtYjRlNy1kMWM5NzRkNmU3MmUiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NjU1OTQzNn0.zULRguS8LloOwVDjLID9TZST1LygDXYVND7XoZOsM4E
 
 {
-    "title": "Curso de Programação"
+    "title": "Curso de Programação 2"
 }
 
 ###
 
 GET http://localhost:3333/courses
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwNzg2MGExOC0zYzA5LTRlODYtYjRlNy1kMWM5NzRkNmU3MmUiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NjU1OTQzNn0.zULRguS8LloOwVDjLID9TZST1LygDXYVND7XoZOsM4E
+
 ###
 
 GET http://localhost:3333/courses/0d52607c-eab0-4db3-a612-0ea94c7e356c
