@@ -5,7 +5,7 @@ import { courses, users } from "../../database/schema.ts"
 import { hash } from "argon2"
 import { randomUUID } from 'node:crypto'
 
-export async function makeUser(role?: 'student' | 'manager') {
+export async function makeUser(role?: 'admin' | 'manager' | 'supervisor' | 'analyst') {
   const passwordBeforeHash = randomUUID()
 
   const result = await db.insert(users).values({
@@ -21,7 +21,7 @@ export async function makeUser(role?: 'student' | 'manager') {
   }
 }
 
-export async function makeAuthenticatedUser(role: 'student' | 'manager') {
+export async function makeAuthenticatedUser(role: 'admin' | 'manager' | 'supervisor' | 'analyst') {
   const { user } = await makeUser(role)
 
   if (!process.env.JWT_SECRET) {

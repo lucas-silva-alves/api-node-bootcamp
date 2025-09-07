@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken"
 
 type JwtPayload = {
     sub: string
-    role: 'student' | 'manager'
+    role: 'admin' | 'manager' | 'supervisor' | 'analyst'
 }
 
 export async function checkRequestJwt(request: FastifyRequest, reply: FastifyReply) {

@@ -8,7 +8,7 @@ import { makeAuthenticatedUser } from '../tests/factories/make-user.ts'
 test('get course by ID', async () => {
   await server.ready()
   
-  const { token } = await makeAuthenticatedUser('student')
+  const { token } = await makeAuthenticatedUser('analyst')
   const course = await makeCourse()
 
   const response = await request(server.server)
@@ -28,7 +28,7 @@ test('get course by ID', async () => {
 test('return 404 for no existing courses', async () => {
   await server.ready()
   
-  const { token } = await makeAuthenticatedUser('student')
+  const { token } = await makeAuthenticatedUser('analyst')
 
 
   const response = await request(server.server)

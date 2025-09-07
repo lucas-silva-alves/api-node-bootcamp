@@ -1,6 +1,7 @@
 import fastify from "fastify"
 import { fastifySwagger } from '@fastify/swagger'
 import { validatorCompiler, serializerCompiler, type ZodTypeProvider, jsonSchemaTransform } from 'fastify-type-provider-zod'
+import { createUserRoute } from "./routes/create-user.ts"
 import { createCourseRoute } from './routes/create-course.ts'
 import { getCourseByIdRoute } from './routes/get-course-by-id.ts'
 import { getCoursesRoute } from './routes/get-courses.ts'
@@ -43,6 +44,7 @@ if (process.env.NODE_ENV === 'development') {
 server.setValidatorCompiler(validatorCompiler)
 server.setSerializerCompiler(serializerCompiler)
 
+server.register(createUserRoute)
 server.register(createCourseRoute)
 server.register(getCourseByIdRoute)
 server.register(getCoursesRoute)

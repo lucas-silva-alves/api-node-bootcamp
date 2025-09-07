@@ -1,1 +1,1 @@
-CREATE DATABASE desafio_test
+CREATE DATABASE media_test

@@ -1,27 +1,35 @@
-POST http://localhost:3333/courses
+POST http://localhost:3333/users
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwNzg2MGExOC0zYzA5LTRlODYtYjRlNy1kMWM5NzRkNmU3MmUiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NjU1OTQzNn0.zULRguS8LloOwVDjLID9TZST1LygDXYVND7XoZOsM4E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlOTQ0MjE0ZC1hZjU2LTQ0ZmYtYTIwYi0zZWYwNGNmMjlkYjUiLCJyb2xlIjoiYW5hbHlzdCIsImlhdCI6MTc1NzI4NzE5MX0.CY0s45JlH2gOy1IJ0HToM0OfGseHMKuY9OZ1r4x3Cys
 
 {
-    "title": "Curso de Programação 2"
+    "name": "Hot",
+    "email": "hot@gmail.com",
+    "password": "12345678",
+    "role": "supervisor"
+}
+
+###
+
+POST http://localhost:3333/courses
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMzQ2YTc0ZC1mZTQ4LTQ2ZGUtYTFiNC03YWRlZDZhMTc2NTYiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTcyODU5MDZ9.TGmC9f424sql0jt74B98RX_tDWjiChuPIrR4C9RRHmU
+
+{
+    "title": "Curso de Marketing 39283"
 }
 
 ###
 
 GET http://localhost:3333/courses
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwNzg2MGExOC0zYzA5LTRlODYtYjRlNy1kMWM5NzRkNmU3MmUiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NjU1OTQzNn0.zULRguS8LloOwVDjLID9TZST1LygDXYVND7XoZOsM4E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMzQ2YTc0ZC1mZTQ4LTQ2ZGUtYTFiNC03YWRlZDZhMTc2NTYiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTcyODUzODF9.g0Mf8VQfUbLThj6FQP0ezRvY9prRg7vPXXhzPhYsAIk
 
 ###
 
-GET http://localhost:3333/courses/0d52607c-eab0-4db3-a612-0ea94c7e356c
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwNzg2MGExOC0zYzA5LTRlODYtYjRlNy1kMWM5NzRkNmU3MmUiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NjU1Nzg5Nn0.7dWz97bwJfQZovjuH6GAg9TjqVphqaaGVoJP5k4m1rY
+GET http://localhost:3333/courses/4a8fd892-4239-4e86-b30c-23b11126c20a
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMGIwODk5MC00YzQxLTQ1NjgtYWNlNy1kZmUxMDI3ODgwNjQiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NzIwMDE3OX0.8T1eakPdM3OLOQml6Tv4CW84kaqoa01oOgRV-UFv1oY
 
-
-###
-
-GET https://api-node-bootcamp.fly.dev/courses/0d52607c-eab0-4db3-a612-0ea94c7e356c
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwNzg2MGExOC0zYzA5LTRlODYtYjRlNy1kMWM5NzRkNmU3MmUiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NjU1Nzg5Nn0.7dWz97bwJfQZovjuH6GAg9TjqVphqaaGVoJP5k4m1rY
 
 ###
 
@@ -29,6 +37,6 @@ POST http://localhost:3333/sessions
 Content-Type: application/json
 
 {
-    "email": "Yuri_Martins67@bol.com.br",
-    "password": "password123"
+    "email": "hot@gmail.com",
+    "password": "12345678"
 }

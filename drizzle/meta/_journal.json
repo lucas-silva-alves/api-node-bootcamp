@@ -57,6 +57,13 @@
       "when": 1756412418412,
       "tag": "0007_even_psynapse",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1757281515483,
+      "tag": "0008_little_black_widow",
+      "breakpoints": true
     }
   ]
 }

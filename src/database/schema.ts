@@ -1,8 +1,10 @@
 import { pgTable, uuid, text, timestamp, uniqueIndex, pgEnum } from 'drizzle-orm/pg-core'
 
 export const userRole = pgEnum('user_role', [
-    'student',
+    'admin',
     'manager',
+    'supervisor',
+    'analyst',
 ])
 
 export const users = pgTable('users', {
@@ -10,7 +12,7 @@ export const users = pgTable('users', {
     name: text().notNull(),
     email: text().notNull().unique(),
     password: text().notNull(),
-    role: userRole().notNull().default('student'),
+    role: userRole().notNull().default('analyst'),
 })
 
 export const courses = pgTable('courses', {
